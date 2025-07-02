@@ -35,24 +35,7 @@ A **scalable, production-ready real-time chat application** built with the **MER
 
 ---
 
-## 🧩 System Architecture
 
-```mermaid
-graph TD
-  A[Client - React.js App] -->|WebSocket| B[Gateway Service]
-  B -->|REST API| C[Auth Service]
-  B -->|WebSocket + RabbitMQ| D[Chat Service]
-  C --> E[(MongoDB)]
-  D --> F[(MongoDB)]
-  D --> G[(Redis)]
-  subgraph Cloud Deployment (AWS)
-    B
-    C
-    D
-    E
-    F
-    G
-  end
 # 1. Clone the repo
 git clone https://github.com/pranaydodiya/Chat-App.git
 cd Chat-App
